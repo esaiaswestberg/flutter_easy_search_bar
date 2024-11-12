@@ -25,17 +25,17 @@
 // ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
 // POSSIBILITY OF SUCH DAMAGE.
 
-library easy_search_bar;
+library forking_search_bar;
 
 import 'dart:async';
 
-import 'package:easy_search_bar/widgets/filterable_list.dart';
+import 'package:forking_search_bar/widgets/filterable_list.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 
-class EasySearchBar<T> extends StatefulWidget implements PreferredSizeWidget {
+class ForkingSearchBar<T> extends StatefulWidget implements PreferredSizeWidget {
   /// The title to be displayed inside AppBar
   final Widget title;
 
@@ -145,7 +145,7 @@ class EasySearchBar<T> extends StatefulWidget implements PreferredSizeWidget {
   /// Can be uses to allow user to cancel suggestions with escape or back button.
   final bool cancelableSuggestions;
 
-  const EasySearchBar(
+  const ForkingSearchBar(
       {Key? key,
       required this.title,
       required this.onSearch,
@@ -187,14 +187,14 @@ class EasySearchBar<T> extends StatefulWidget implements PreferredSizeWidget {
         super(key: key);
 
   @override
-  State<EasySearchBar<T>> createState() => _EasySearchBarState<T>();
+  State<ForkingSearchBar<T>> createState() => _ForkingSearchBarState<T>();
 
   @override
   Size get preferredSize =>
       Size.fromHeight(appBarHeight + (isFloating ? 5 : 0));
 }
 
-class _EasySearchBarState<T> extends State<EasySearchBar<T>>
+class _ForkingSearchBarState<T> extends State<ForkingSearchBar<T>>
     with TickerProviderStateMixin {
   final LayerLink _layerLink = LayerLink();
   bool _hasOpenedOverlay = false;

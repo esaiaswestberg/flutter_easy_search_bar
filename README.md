@@ -1,12 +1,16 @@
-# Easy Search Bar
+# Forking Search Bar
 
-<a href="https://www.buymeacoffee.com/4inka" target="_blank"><img src="https://cdn.buymeacoffee.com/buttons/v2/default-violet.png" alt="Buy Me A Pizza" style="height: 60px !important;width: 217px !important;" ></a>
+[Original Repo](https://github.com/4inka/flutter_easy_search_bar)
 
-A Flutter plugin to help you handle search inside your application. Can be used inside appBar or inside your application body depending on your necessities.
+A **(forked)** Flutter plugin to help you handle search inside your application. Can be used inside appBar or inside your application body depending on your necessities.
+
+## Changes
+- Updated dependencies
+- Made it possible to compile in newer versions of Flutter
 
 ## Preview
-![Default AppBar Preview](https://raw.githubusercontent.com/4inka/flutter_easy_search_bar/main/preview/preview.gif)
-![Floating AppBar Preview](https://raw.githubusercontent.com/4inka/flutter_easy_search_bar/main/preview/preview2.gif)
+![Default AppBar Preview](https://raw.githubusercontent.com/esaiaswestberg/flutter_easy_search_bar/main/preview/preview.gif)
+![Floating AppBar Preview](https://raw.githubusercontent.com/esaiaswestberg/flutter_easy_search_bar/main/preview/preview2.gif)
 
 ## Installation
 
@@ -15,35 +19,7 @@ In the `pubspec.yaml` of your flutter project, add the following dependency:
 ``` yaml
 dependencies:
   ...
-  easy_search_bar: ^2.5.0
-```
-
-## Migrating from 1.x.x to 2.x.x
-
-Now instead of using the EasySearchBar widget inside AppBar widget, you can replace the AppBar with it.
-
-This is what you used before:
-
-``` dart
-Scaffold(
-  appBar: AppBar(
-    title: EasySearchBar(
-      title: 'Example',
-      onSearch: (value) => setState(() => searchValue = value)
-    )
-  )
-)
-```
-
-And this is what it is supposed to look like now:
-
-``` dart
-Scaffold(
-  appBar: EasySearchBar(
-    title: Text('Example'),
-    onSearch: (value) => setState(() => searchValue = value)
-  )
-)
+  forking_search_bar: ^3.0.0
 ```
 
 ## Basic example with suggestions
@@ -51,7 +27,7 @@ Scaffold(
 You can create a simple searchbar example widget with suggestions with the following example:
 
 ``` dart
-import 'package:easy_search_bar/easy_search_bar.dart';
+import 'package:forking_search_bar/forking_search_bar.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -77,7 +53,7 @@ class _MyHomePageState extends State<MyHomePage> {
         primarySwatch: Colors.orange
       ),
       home: Scaffold(
-        appBar: EasySearchBar(
+        appBar: ForkingSearchBar(
           title: const Text('Example'),
           onSearch: (value) => setState(() => searchValue = value),
           suggestions: _suggestions
@@ -154,7 +130,7 @@ class _MyHomePageState extends State<MyHomePage> {
  | cancelableSuggestions     | `bool`                                   | :x: | Can be used to allow the user to cancel the suggestions overlay by pressing escape or the back button on mobile                                    | false |
 
 ## Issues & Suggestions
-If you encounter any issue you or want to leave a suggestion you can do it by filling an [issue](https://github.com/4inka/flutter_easy_search_bar/issues).
+If you encounter any issue you or want to leave a suggestion you can do it by filling an [issue](https://github.com/esaiaswestberg/flutter_easy_search_bar/issues).
 
 ## Contributions
 Here's the list of our awesome contributors:
@@ -162,5 +138,6 @@ Here's the list of our awesome contributors:
 - [Victor Gabriel](https://github.com/vctrgbrl)
 - [Ivan Terekhin](https://github.com/JEuler)
 - [Dolev Franco](https://github.com/dtkdt100)
+- [Esaias Westberg](https://github.com/esaiaswestberg) (forked)
 
 ### Thank you for the support!
